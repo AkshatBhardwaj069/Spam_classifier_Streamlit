@@ -12,7 +12,7 @@ if st.button('Classify'):
         st.write('Please enter a valid message.')
     else:
         # Send request to Flask API
-        api_url = 'http://127.0.0.1:5000/predict'  # Update with the appropriate URL if hosted elsewhere
+        api_url = 'https://spam-classifier-flask.onrender.com/predict'  # Update with the appropriate URL if hosted elsewhere
         data = {'message': message}
         try:
             response = requests.post(api_url, json=data)
